@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://main44dlta3j"]
+
+[ext_resource type="Texture2D" uid="uid://hikyhub2bww6" path="res://coob.png" id="1_3jjuk"]
+[ext_resource type="Script" path="res://player.gd" id="1_ba4ty"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lu3ry"]
+size = Vector2(15, 15)
+
+[node name="Player" type="CharacterBody2D"]
+texture_filter = 1
+collision_layer = 3
+safe_margin = 1.0
+script = ExtResource("1_ba4ty")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_lu3ry")
+
+[node name="Coob" type="Sprite2D" parent="."]
+texture = ExtResource("1_3jjuk")
